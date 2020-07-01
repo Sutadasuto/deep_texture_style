@@ -1,0 +1,16 @@
+Content layers:
+['block5_conv2']
+Style layers:
+['block1_conv1', 'block2_conv1', 'block3_conv1', 'block4_conv1', 'block5_conv1']
+
+--target_content: https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg
+--target_style: https://storage.googleapis.com/download.tensorflow.org/example_images/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg
+--initial_image: content
+--initial_image_path: None
+--epochs: 5
+--steps: 100
+--style_weight: 0.01
+--content_weight: 10000.0
+--variation_weight: 30.0
+--learning_rate: 0.02
+--max_dim: None
