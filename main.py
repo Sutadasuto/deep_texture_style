@@ -77,7 +77,7 @@ def main(args):
             print(".", end='')
         display.clear_output(wait=True)
         print("Epoch {} finished. Train step: {}/{}. Current time: {:.1f}s. Current loss: {:.2f}".format(n + 1, step, args.steps*args.epochs,
-                                                                                   time.time() - start, current_loss))
+                                                                                   time.time() - start, current_loss.numpy()[0]))
         tensor_to_image(image).save(os.path.join("images", output_file_name % step))
 
     end = time.time()
