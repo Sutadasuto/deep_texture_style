@@ -59,7 +59,7 @@ def main(args):
         with tf.GradientTape() as tape:
             outputs = extractor(image)
             loss = style_content_loss(outputs, style_targets, num_style_layers, content_targets, num_content_layers,
-                                      style_weight=1e-2, content_weight=1e4)
+                                      style_weight=args.style_weight, content_weight=args.content_weight)
             loss += total_variation_loss(image, weight=args.variation_weight)
         grad = tape.gradient(loss, image)
         opt.apply_gradients([(grad, image)])
