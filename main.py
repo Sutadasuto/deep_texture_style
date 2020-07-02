@@ -68,7 +68,7 @@ def main(args):
 
     start = time.time()
     step = 0
-    print("Epoch {} finished. Train step: {}/{}. Current time: {:.1f}s".format(0, step, args.steps,
+    print("Epoch {} finished. Train step: {}/{}. Current time: {:.1f}s".format(0, step, args.steps*args.epochs,
                                                                                time.time() - start))
     for n in range(args.epochs):
         for m in range(args.steps):
